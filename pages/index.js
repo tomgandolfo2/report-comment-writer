@@ -45,8 +45,8 @@ const CommentGenerator = () => {
     if (evidence && logro) {
       const pronoun =
         gender === "masculine"
-          ? "Evidencia en el proceso de aprendizaje del alumno:"
-          : "Evidencia en el proceso de aprendizaje de la alumna:";
+          ? "Se puede evidenciar en el proceso de aprendizaje del alumno"
+          : "Se puede evidenciar en el proceso de aprendizaje de la alumna";
       comment += `${pronoun} ${evidence}.\n`;
     } else if (!logro && evidence) {
       comment += `evidencia en el proceso de aprendizaje ${evidence}. \n`;
@@ -55,18 +55,18 @@ const CommentGenerator = () => {
     // Check if optional part is selected
     if (optionalPart) {
       if (grade === "9" || grade === "10") {
-        comment += `Destaco que ha desarrollado habilidades de ${optionalPart}.\n`;
+        comment += `Destaco ${optionalPart}.\n`;
       } else if (grade === "7" || grade === "8") {
-        comment += `Valoro que ha desarrollado habilidades de ${optionalPart}.\n`;
+        comment += `Valoro ${optionalPart}.\n`;
       } else {
-        comment += `Reconozco que ha desarrollado habilidades de ${optionalPart}.\n`;
+        comment += `Reconozco ${optionalPart}.\n`;
       }
     }
     // Check if encouragement is selected
     if (aliento) {
       // Generate the "Lo/la aliento a" part with gender-specific pronoun
       const pronoun = gender === "masculine" ? "Lo" : "La";
-      comment += `${pronoun} aliento a ${aliento}.\n`;
+      comment += `${pronoun} aliento a ${aliento} para alcanzar las metas del curso.\n`;
     }
 
     // Return the generated comment
@@ -180,11 +180,15 @@ const CommentGenerator = () => {
           onChange={(e) => setOptionalPart(e.target.value)}
         >
           <option value="">Select Optional Part</option>
-          <option value="su trabajo">trabajo</option>
-          <option value="su actitud">actitud</option>
-          <option value="su disposición">disposición</option>
-          <option value="su esfuerzo">esfuerzo</option>
-          <option value="su compañerismo">compañerismo</option>
+          <option value="su trabajo en clase">trabajo</option>
+          <option value="su actitud en el aula">actitud</option>
+          <option value="la buena disposición al aprendizaje">
+            disposición
+          </option>
+          <option value="su esfuerzo al realizar tareas">esfuerzo</option>
+          <option value="su buena predisposición frente a compañeros y compañeras">
+            compañerismo
+          </option>
           {/* Add more options as needed */}
         </select>
       </div>
