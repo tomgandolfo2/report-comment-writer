@@ -87,7 +87,7 @@ const CommentGenerator = () => {
   return (
     <div className="bg-gradient-to-br from-blue-100 to-blue-400 h-screen">
       <div className="max-w-md mx-auto p-4">
-        <h1 className="text-2xl font-bold mb-4">Comment Generator!</h1>
+        <h1 className="text-2xl font-bold mb-4">Comment Generator</h1>
         <div className="mb-4">
           <label htmlFor="name" className="font-bold mr-2">
             Name:{" "}
