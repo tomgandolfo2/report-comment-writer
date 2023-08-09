@@ -77,7 +77,7 @@ const CommentGenerator = () => {
     if (aliento) {
       // Generate the "Lo/la aliento a" part with gender-specific pronoun
       const pronoun = gender === "masculine" ? "Lo" : "La";
-      comment += `${pronoun} aliento a ${aliento} para alcanzar las metas del curso.`;
+      comment += `${pronoun} aliento a ${aliento}.`;
     }
 
     // Return the generated comment
@@ -220,16 +220,21 @@ const CommentGenerator = () => {
           >
             <option value="">Select Option</option>
             <option value="continuar así">continuar así</option>
+            <option value="seguir trabajando así">seguir trabajando así</option>
             <option value="seguir mejorando">seguir mejorando</option>
-            <option value="seguir los consejos del profesor">
+            <option value="seguir los consejos del profesor para alcanzar mejor rendimiento">
               seguir consejos
             </option>
             <option value="prestar más atención a la clase">
               prestar atención
             </option>
-            <option value="seguir esforzándose">seguir esforzándose</option>
+            <option value="seguir esforzándose para lograr avanzar en el curso">
+              seguir esforzándose
+            </option>
             <option value="participar más en clase">participar más</option>
-            <option value="evitar distraerse">evitar distraerse</option>
+            <option value="evitar distraerse para lograr avanzar en el curso">
+              evitar distraerse
+            </option>
             {/* Add more options as needed */}
           </select>
         </div>
