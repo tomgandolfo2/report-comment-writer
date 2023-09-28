@@ -95,7 +95,7 @@ const CommentGenerator = () => {
       // Generate the "Lo/la aliento a" part with gender-specific pronoun
       // const pronoun = gender === "masculine" ? "Lo" : "La";
       // comment += `${pronoun} aliento a ${aliento}.`;
-      comment += ` ${aliento}.`;
+      comment += `${aliento}.`;
     }
 
     // Return the generated comment
