@@ -26,14 +26,31 @@ const CommentGenerator = () => {
     // Generate the main part of the comment
     comment += `${name} `;
 
+    // if (grade === "9" || grade === "10") {
+    //   comment += `demuestra muy buen rendimiento. `;
+    // } else if (grade === "7" || grade === "8") {
+    //   comment += `demuestra buen rendimiento. `;
+    // } else if (grade === "6") {
+    //   comment += `presenta un rendimiento satisfactorio. `;
+    // } else if (grade === "5") {
+    //   comment += `presenta un rendimiento aceptable. `;
+    // } else if (
+    //   grade === "4" ||
+    //   grade === "3" ||
+    //   grade === "2" ||
+    //   grade === "1"
+    // ) {
+    //   comment += `ha presentado un rendimiento bajo. `;
+    // }
+
     if (grade === "9" || grade === "10") {
-      comment += `demuestra muy buen rendimiento. `;
+      comment += `cumple con los requisitos del curso de manera destacada. `;
     } else if (grade === "7" || grade === "8") {
-      comment += `demuestra buen rendimiento. `;
+      comment += `cumple con los requisitos del curso de manera satisfactoria. `;
     } else if (grade === "6") {
-      comment += `presenta un rendimiento satisfactorio. `;
+      comment += `cumple con los requisitos del curso de manera aceptable. `;
     } else if (grade === "5") {
-      comment += `presenta un rendimiento aceptable. `;
+      comment += `cumple con los requisitos del curso de manera aceptable. `;
     } else if (
       grade === "4" ||
       grade === "3" ||
@@ -76,8 +93,9 @@ const CommentGenerator = () => {
     // Check if encouragement is selected
     if (aliento) {
       // Generate the "Lo/la aliento a" part with gender-specific pronoun
-      const pronoun = gender === "masculine" ? "Lo" : "La";
-      comment += `${pronoun} aliento a ${aliento}.`;
+      // const pronoun = gender === "masculine" ? "Lo" : "La";
+      // comment += `${pronoun} aliento a ${aliento}.`;
+      comment += ` ${aliento}.`;
     }
 
     // Return the generated comment
@@ -208,7 +226,7 @@ const CommentGenerator = () => {
             {/* Add more options as needed */}
           </select>
         </div>
-        <div className="mb-4">
+        {/* <div className="mb-4">
           <label htmlFor="aliento" className="font-bold mr-2">
             Aliento a:{" "}
           </label>
@@ -235,7 +253,42 @@ const CommentGenerator = () => {
             <option value="evitar distraerse para lograr avanzar en el curso">
               evitar distraerse
             </option>
-            {/* Add more options as needed */}
+          </select>
+        </div> */}
+
+        <div className="mb-4">
+          <label htmlFor="aliento" className="font-bold mr-2">
+            Aliento a:{" "}
+          </label>
+          <select
+            className="border border-gray-300 rounded p-2"
+            id="aliento"
+            value={aliento}
+            onChange={(e) => setAliento(e.target.value)}
+          >
+            <option value="">Select Option</option>
+            <option value="Se recomienda continuar así">continuar así</option>
+            <option value="Se sugiere seguir trabajando así">
+              seguir trabajando así
+            </option>
+            <option value="Se recomienda seguir mejorando">
+              seguir mejorando
+            </option>
+            <option value="Se sugiere seguir los consejos del profesor para alcanzar mejor rendimiento">
+              seguir consejos
+            </option>
+            <option value="Se recomienda prestar más atención a la clase">
+              prestar atención
+            </option>
+            <option value="Se sugiere seguir esforzándose para lograr avanzar en el curso">
+              seguir esforzándose
+            </option>
+            <option value="Se invita a participar más en clase">
+              participar más
+            </option>
+            <option value="Se recomienda evitar distraerse para lograr avanzar en el curso">
+              evitar distraerse
+            </option>
           </select>
         </div>
 
