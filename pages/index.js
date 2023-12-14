@@ -43,14 +43,31 @@ const CommentGenerator = () => {
     //   comment += `ha presentado un rendimiento bajo. `;
     // }
 
+    // if (grade === "9" || grade === "10") {
+    //   comment += `cumple con los requisitos del curso de manera destacada. `;
+    // } else if (grade === "7" || grade === "8") {
+    //   comment += `cumple con los requisitos del curso de manera satisfactoria. `;
+    // } else if (grade === "6") {
+    //   comment += `cumple con los requisitos del curso de manera aceptable. `;
+    // } else if (grade === "5") {
+    //   comment += `cumple con los requisitos del curso de manera aceptable. `;
+    // } else if (
+    //   grade === "4" ||
+    //   grade === "3" ||
+    //   grade === "2" ||
+    //   grade === "1"
+    // ) {
+    //   comment += `ha presentado un rendimiento bajo. `;
+    // }
+
     if (grade === "9" || grade === "10") {
-      comment += `cumple con los requisitos del curso de manera destacada. `;
+      comment += `ha alcanzado los objetivos del curso con una calificación destacada. ¡Felicitaciones!`;
     } else if (grade === "7" || grade === "8") {
-      comment += `cumple con los requisitos del curso de manera satisfactoria. `;
+      comment += `ha alcanzado los objetivos del curso con una calificación satisfactoria.`;
     } else if (grade === "6") {
-      comment += `cumple con los requisitos del curso de manera aceptable. `;
+      comment += `ha alcanzado los objetivos del curso con una calificación aceptable.`;
     } else if (grade === "5") {
-      comment += `cumple con los requisitos del curso de manera aceptable. `;
+      comment += `ha alcanzado los objetivos del curso con una calificación aceptable.`;
     } else if (
       grade === "4" ||
       grade === "3" ||
